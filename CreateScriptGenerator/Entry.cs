@@ -76,7 +76,8 @@ namespace CreateScriptGenerator
 				textName.Text,
 				(OracleType)comType.SelectedIndex,
 				cbPrimarykey.Checked,
-				cbNullable.Checked);
+				cbNullable.Checked,
+				cmbAI.Checked);
 			}
 			else
 			{
@@ -93,7 +94,7 @@ namespace CreateScriptGenerator
 						}
 					}
 				}
-				catch(NullReferenceException ex)
+				catch (NullReferenceException ex)
 				{
 					Console.WriteLine(ex);
 				}
@@ -104,7 +105,8 @@ namespace CreateScriptGenerator
 				(OracleType)comType.SelectedIndex,
 				cbPrimarykey.Checked,
 				cbNullable.Checked,
-				selectedEntry);
+				selectedEntry,
+				cmbAI.Checked);
 			}
 
 			this.TableEntry = boundedEntry;
@@ -115,6 +117,8 @@ namespace CreateScriptGenerator
 		{
 			if (cbPrimarykey.Checked)
 			{
+				if (comType.Items[comType.SelectedIndex].ToString() == "Number")
+					cmbAI.Checked = true;
 				comEntries.SelectedItem = null;
 				comTable.SelectedItem = null;
 				comTable.SelectedIndex = -1;
@@ -127,6 +131,7 @@ namespace CreateScriptGenerator
 			}
 			else
 			{
+				cmbAI.Checked = false;
 				cbNullable.Enabled = true;
 				comEntries.Enabled = true;
 				comTable.Enabled = true;
@@ -143,6 +148,17 @@ namespace CreateScriptGenerator
 			else
 			{
 				cbPrimarykey.Enabled = true;
+			}
+		}
+
+		private void comType_SelectedIndexChanged(object sender, EventArgs e)
+		{
+			if (comType.Items[comType.SelectedIndex].ToString() == "Number")
+				cmbAI.Enabled = true;
+			else
+			{
+				cmbAI.Checked = false;
+				cmbAI.Enabled = false;
 			}
 		}
 	}

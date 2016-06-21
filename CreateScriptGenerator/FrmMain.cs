@@ -51,6 +51,7 @@ namespace CreateScriptGenerator
 		{
 			foreach (Table table in TableCollector.tables)
 			{
+				table.Entries.Clear();
 				foreach (Entry entry in table.UiTable.Entries)
 				{
 					entry.UpdateComs();

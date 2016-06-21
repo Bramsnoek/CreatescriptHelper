@@ -34,6 +34,7 @@
 			this.label3 = new System.Windows.Forms.Label();
 			this.label4 = new System.Windows.Forms.Label();
 			this.label5 = new System.Windows.Forms.Label();
+			this.label6 = new System.Windows.Forms.Label();
 			this.SuspendLayout();
 			// 
 			// btnAdd
@@ -91,10 +92,20 @@
 			this.label5.TabIndex = 16;
 			this.label5.Text = "Row Reference";
 			// 
+			// label6
+			// 
+			this.label6.AutoSize = true;
+			this.label6.Location = new System.Drawing.Point(660, 4);
+			this.label6.Name = "label6";
+			this.label6.Size = new System.Drawing.Size(20, 17);
+			this.label6.TabIndex = 17;
+			this.label6.Text = "AI";
+			// 
 			// TableControl
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.Controls.Add(this.label6);
 			this.Controls.Add(this.label5);
 			this.Controls.Add(this.label4);
 			this.Controls.Add(this.label3);
@@ -102,7 +113,7 @@
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.btnAdd);
 			this.Name = "TableControl";
-			this.Size = new System.Drawing.Size(667, 493);
+			this.Size = new System.Drawing.Size(689, 493);
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -116,5 +127,6 @@
 		private System.Windows.Forms.Label label3;
 		private System.Windows.Forms.Label label4;
 		private System.Windows.Forms.Label label5;
+		private System.Windows.Forms.Label label6;
 	}
 }

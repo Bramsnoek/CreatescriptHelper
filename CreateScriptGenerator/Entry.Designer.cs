@@ -34,6 +34,7 @@
 			this.cbPrimarykey = new System.Windows.Forms.CheckBox();
 			this.comType = new System.Windows.Forms.ComboBox();
 			this.textName = new System.Windows.Forms.TextBox();
+			this.cmbAI = new System.Windows.Forms.CheckBox();
 			this.SuspendLayout();
 			// 
 			// cbNullable
@@ -81,6 +82,7 @@
 			this.comType.Name = "comType";
 			this.comType.Size = new System.Drawing.Size(121, 24);
 			this.comType.TabIndex = 13;
+			this.comType.SelectedIndexChanged += new System.EventHandler(this.comType_SelectedIndexChanged);
 			// 
 			// textName
 			// 
@@ -90,10 +92,21 @@
 			this.textName.Size = new System.Drawing.Size(121, 24);
 			this.textName.TabIndex = 12;
 			// 
+			// cmbAI
+			// 
+			this.cmbAI.AutoSize = true;
+			this.cmbAI.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.cmbAI.Location = new System.Drawing.Point(658, 6);
+			this.cmbAI.Name = "cmbAI";
+			this.cmbAI.Size = new System.Drawing.Size(18, 17);
+			this.cmbAI.TabIndex = 18;
+			this.cmbAI.UseVisualStyleBackColor = true;
+			// 
 			// Entry
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.Controls.Add(this.cmbAI);
 			this.Controls.Add(this.cbNullable);
 			this.Controls.Add(this.comEntries);
 			this.Controls.Add(this.comTable);
@@ -101,7 +114,7 @@
 			this.Controls.Add(this.comType);
 			this.Controls.Add(this.textName);
 			this.Name = "Entry";
-			this.Size = new System.Drawing.Size(649, 29);
+			this.Size = new System.Drawing.Size(689, 29);
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -115,5 +128,6 @@
 		private System.Windows.Forms.CheckBox cbPrimarykey;
 		private System.Windows.Forms.ComboBox comType;
 		private System.Windows.Forms.TextBox textName;
+		private System.Windows.Forms.CheckBox cmbAI;
 	}
 }

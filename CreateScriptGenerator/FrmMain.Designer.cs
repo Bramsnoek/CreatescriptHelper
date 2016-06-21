@@ -33,8 +33,8 @@
 			this.btnAddTable = new System.Windows.Forms.Button();
 			this.txtTableName = new System.Windows.Forms.TextBox();
 			this.gbDir = new System.Windows.Forms.GroupBox();
-			this.txtDir = new System.Windows.Forms.TextBox();
 			this.btnDir = new System.Windows.Forms.Button();
+			this.txtDir = new System.Windows.Forms.TextBox();
 			this.gbDir.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -43,7 +43,7 @@
 			this.tbPages.Location = new System.Drawing.Point(4, 67);
 			this.tbPages.Name = "tbPages";
 			this.tbPages.SelectedIndex = 0;
-			this.tbPages.Size = new System.Drawing.Size(675, 522);
+			this.tbPages.Size = new System.Drawing.Size(716, 522);
 			this.tbPages.TabIndex = 0;
 			// 
 			// btnGenerate
@@ -87,14 +87,6 @@
 			this.gbDir.TabStop = false;
 			this.gbDir.Text = "Class Directory";
 			// 
-			// txtDir
-			// 
-			this.txtDir.Location = new System.Drawing.Point(9, 25);
-			this.txtDir.Margin = new System.Windows.Forms.Padding(4);
-			this.txtDir.Name = "txtDir";
-			this.txtDir.Size = new System.Drawing.Size(371, 25);
-			this.txtDir.TabIndex = 0;
-			// 
 			// btnDir
 			// 
 			this.btnDir.Image = global::CreateScriptGenerator.Properties.Resources.OpenFolder;
@@ -106,11 +98,19 @@
 			this.btnDir.UseVisualStyleBackColor = true;
 			this.btnDir.Click += new System.EventHandler(this.btnDir_Click);
 			// 
+			// txtDir
+			// 
+			this.txtDir.Location = new System.Drawing.Point(9, 25);
+			this.txtDir.Margin = new System.Windows.Forms.Padding(4);
+			this.txtDir.Name = "txtDir";
+			this.txtDir.Size = new System.Drawing.Size(371, 25);
+			this.txtDir.TabIndex = 0;
+			// 
 			// FrmMain
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(675, 624);
+			this.ClientSize = new System.Drawing.Size(726, 624);
 			this.Controls.Add(this.gbDir);
 			this.Controls.Add(this.txtTableName);
 			this.Controls.Add(this.btnAddTable);

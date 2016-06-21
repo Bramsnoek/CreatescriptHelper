@@ -14,22 +14,25 @@ namespace CreateScriptGenerator
 		public bool Nullable { get; set; }
 		public TableEntry Reference { get; set; }
 		public string TableName { get; set; }
+		public bool AutoIncrement { get; set; }
 
-		public TableEntry(string name, OracleType type, bool pk, bool nullable)
+		public TableEntry(string name, OracleType type, bool pk, bool nullable, bool autoIncrement)
 		{
 			this.Name = name;
 			this.Type = type;
 			this.PK = pk;
 			this.Nullable = nullable;
+			this.AutoIncrement = autoIncrement;
 		}
 
-		public TableEntry(string name, OracleType type, bool pk, bool nullable, TableEntry reference)
+		public TableEntry(string name, OracleType type, bool pk, bool nullable, TableEntry reference, bool autoIncrement)
 		{
 			this.Reference = reference;
 			this.Name = name;
 			this.Type = type;
 			this.PK = pk;
 			this.Nullable = nullable;
+			this.AutoIncrement = autoIncrement;
 		}
 
 		public override string ToString()
