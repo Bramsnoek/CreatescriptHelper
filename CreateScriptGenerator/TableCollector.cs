@@ -59,14 +59,14 @@ namespace CreateScriptGenerator
 					foreach(TableEntry entry in table.Entries.Where(x => x.AutoIncrement))
 					{
 						fileWriter.Write(@"
-DROP SEQUENCE SEQ_" + entry.TableName + @"_" + entry.Name + @"
+DROP SEQUENCE SEQ_" + entry.TableName + @"_" + entry.Name + @";
 CREATE SEQUENCE SEQ_" + entry.TableName + @"_" + entry.Name + @"
 START WITH 1
 INCREMENT BY 1
 NOMAXVALUE;
   
 CREATE OR REPLACE TRIGGER T_" + entry.TableName + @"_" + entry.Name + @"
-BEFORE INSERT ON " + entry.TableName + @"_" + entry.Name + @"
+BEFORE INSERT ON " + entry.TableName + @"
 FOR EACH ROW
 BEGIN
   SELECT SEQ_" + entry.TableName + @"_" + entry.Name + @".NEXTVAL INTO :NEW." + entry.Name + @" FROM DUAL;
